@@ -1,0 +1,6 @@
+warn
+4
+debug starting up
+info listening on 8080
+warn disk at 91%
+error out of memory

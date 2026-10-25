@@ -1,0 +1,1 @@
+{"kind":"dir","name":"root","children":[{"kind":"dir","name":"src","children":[{"kind":"file","name":"a.ts","size":300},{"kind":"file","name":"b.ts","size":140}]},{"kind":"file","name":"readme","size":120}]}

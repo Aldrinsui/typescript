@@ -1,0 +1,70 @@
+{
+  "course": "typescript-fundamentals",
+  "language": "typescript",
+  "language_id": 74,
+  "entrypoint": "main.ts",
+  "version": 1,
+  "content_hash": "daa6a626db567d40",
+  "lessons": [
+    {
+      "slug": "hello-typescript",
+      "tests_hash": "6690cd707909"
+    },
+    {
+      "slug": "type-annotations",
+      "tests_hash": "66f5ad4e3eb1"
+    },
+    {
+      "slug": "numbers-and-math",
+      "tests_hash": "82001fb5dc5b"
+    },
+    {
+      "slug": "strings",
+      "tests_hash": "523bab63c083"
+    },
+    {
+      "slug": "interfaces",
+      "tests_hash": "8b6017d28037"
+    },
+    {
+      "slug": "conditionals",
+      "tests_hash": "82c2002e06a3"
+    },
+    {
+      "slug": "loops",
+      "tests_hash": "9f38a6904d3c"
+    },
+    {
+      "slug": "function-types",
+      "tests_hash": "1c2368d91b49"
+    },
+    {
+      "slug": "generics",
+      "tests_hash": "7e0e66920b09"
+    },
+    {
+      "slug": "arrays-and-tuples",
+      "tests_hash": "513ae9861071"
+    },
+    {
+      "slug": "records-and-maps",
+      "tests_hash": "56789c3ce20c"
+    },
+    {
+      "slug": "pipelines",
+      "tests_hash": "2cdeaaf3b7f5"
+    },
+    {
+      "slug": "unions-intersections",
+      "tests_hash": "d2f38b536ada"
+    },
+    {
+      "slug": "type-vs-interface",
+      "tests_hash": "c3a8fd5c8b96"
+    },
+    {
+      "slug": "enums-literals",
+      "tests_hash": "7922144b484d"
+    }
+  ]
+}

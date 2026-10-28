@@ -1,9 +1,13 @@
 
-const inputname: string = require('fs').readFileSync(0, 'utf-8').trim();
+const text: string = require('fs').readFileSync(0, 'utf-8').trim();
 
-const value: unknown = JSON.parse(inputname);
+const minutes = Number(text)
 
-console.log(typeof value)
-console.log(value === null)
-console.log(Array.isArray(value))
-console.log(typeof value === "string" && value.length)
+const days = Math.floor(minutes / 1440);
+
+const remaindingminutes = minutes % 1440;
+
+const hours = Math.floor(remaindingminutes / 60)
+const mins = remaindingminutes % 60
+
+console.log(`${days} d ${hours} h ${mins} min`);

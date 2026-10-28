@@ -1,21 +1,26 @@
 
-const s: string = require('fs').readFileSync(0, 'utf-8').trim();
-
-const space = s.indexOf(" ");
-
-const firstname = s.slice(0, space).toLowerCase();
-const lastname = s.slice(space + 1).toLowerCase();
-
-const firsttitle = firstname.charAt(0).toUpperCase() + firstname.slice(1);
-const lasttitle = lastname.charAt(0).toUpperCase() + lastname.slice(1);
-
-const fullname = (`${firsttitle} ${lasttitle}`);
-
-const intials = firstname.charAt(0).toUpperCase() + "." + lastname.charAt(0).toUpperCase() + ".";
-
-const username = firstname.charAt(0) + lastname
+const lines: string = require('fs')
+    .readFileSync(0, 'utf-8')
+    .trim()
+    .split("\n");
 
 
-console.log(fullname)
-console.log(intials)
-console.log(username)
+interface person {
+    readonly id: string;
+    inputname: string;
+    nickname?: string;
+}
+
+interface Employee extends person {
+    team: string;
+}
+
+const employee: Employee = {
+    id: lines[0],
+    inputname: lines[1],
+    team: lines[2],
+    nickname: lines[3]
+}
+
+console.log(employee.nickname || employee.inputname);
+console.log(`id ${employee.id}, team ${employee.team}`)

@@ -1,13 +1,21 @@
 
-const text: string = require('fs').readFileSync(0, 'utf-8').trim();
+const s: string = require('fs').readFileSync(0, 'utf-8').trim();
 
-const minutes = Number(text)
+const space = s.indexOf(" ");
 
-const days = Math.floor(minutes / 1440);
+const firstname = s.slice(0, space).toLowerCase();
+const lastname = s.slice(space + 1).toLowerCase();
 
-const remaindingminutes = minutes % 1440;
+const firsttitle = firstname.charAt(0).toUpperCase() + firstname.slice(1);
+const lasttitle = lastname.charAt(0).toUpperCase() + lastname.slice(1);
 
-const hours = Math.floor(remaindingminutes / 60)
-const mins = remaindingminutes % 60
+const fullname = (`${firsttitle} ${lasttitle}`);
 
-console.log(`${days} d ${hours} h ${mins} min`);
+const intials = firstname.charAt(0).toUpperCase() + "." + lastname.charAt(0).toUpperCase() + ".";
+
+const username = firstname.charAt(0) + lastname
+
+
+console.log(fullname)
+console.log(intials)
+console.log(username)

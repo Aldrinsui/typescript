@@ -4,23 +4,22 @@ const lines: string = require('fs')
     .trim()
     .split("\n");
 
+const year: number = Number(lines[0]);
+const month: number = Number(lines[1]);
 
-interface person {
-    readonly id: string;
-    inputname: string;
-    nickname?: string;
+if (month === 2) {
+    if (year % 400 === 0 || (year % 4 === 0 && year % 100 != 0)) {
+        console.log(29);
+    } else {
+        console.log(28)
+    }
+} else if (
+    month === 4 ||
+    month === 6 ||
+    month === 9 ||
+    month === 11
+) {
+    console.log(30);
+} else {
+    console.log(31);
 }
-
-interface Employee extends person {
-    team: string;
-}
-
-const employee: Employee = {
-    id: lines[0],
-    inputname: lines[1],
-    team: lines[2],
-    nickname: lines[3]
-}
-
-console.log(employee.nickname || employee.inputname);
-console.log(`id ${employee.id}, team ${employee.team}`)

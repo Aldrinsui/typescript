@@ -4,22 +4,23 @@ const lines: string = require('fs')
     .trim()
     .split("\n");
 
-const year: number = Number(lines[0]);
-const month: number = Number(lines[1]);
 
-if (month === 2) {
-    if (year % 400 === 0 || (year % 4 === 0 && year % 100 != 0)) {
-        console.log(29);
+const n: number = Number(lines[0]);
+
+let peak: number = n;
+let current: number = n;
+let steps: number = 0;
+
+
+while (current !== 1) {
+    if (current % 2 === 0) {
+        current = current / 2;
     } else {
-        console.log(28)
+        current = current * 3 + 1;
     }
-} else if (
-    month === 4 ||
-    month === 6 ||
-    month === 9 ||
-    month === 11
-) {
-    console.log(30);
-} else {
-    console.log(31);
+    steps++;
+    peak = Math.max(peak, current);
 }
+
+console.log(`steps: ${steps}`)
+console.log(`peak: ${peak}`)
